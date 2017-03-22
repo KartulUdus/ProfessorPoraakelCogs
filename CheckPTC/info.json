@@ -1,0 +1,7 @@
+{
+    "AUTHOR" : "FrostTheFox",
+    "INSTALL_MSG" : "MAKE SURE YOU HAVE READ THE README.TXT IN THE REPO, AND HAVE FOLLOWED THE INSTRUCTIONS, OTHERWISE THIS WILL ***NOT*** WORK.",
+    "NAME" : "CheckPTC",
+    "SHORT" : "Checks if we can login and get an access token for PoGo from PTC.",
+    "DESCRIPTION" : "Logs into Pokemon Trainer Club and requests a PoGo access token."
+}
