@@ -9,8 +9,8 @@ class checkproxy:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
-    async def checkproxy(self, proxy):
+    @commands.command(pass_context=True)
+    async def checkproxy(self, ctx, proxy):
         """Checks the provided proxy."""
 
         p = proxy
@@ -26,6 +26,9 @@ class checkproxy:
                 await self.bot.say(':x: 403 Forbidden, proxy is banned.')
         except requests.exceptions.RequestException as e:
             await self.bot.say('Something is wrong with your proxy. Make sure to put the port as well as remove http or https from your input. Authentication is not supported right now.')
+
+        if not ctx.message.channel.is_private:
+            await self.bot.delete_message(ctx.message)
 
 
 def setup(bot):
