@@ -14,8 +14,8 @@ class checkforced:
         """Grabs latest forced API version."""
 
         pr = {
-                 http: ''
-        }
+                 http: '',
+             }
 
         try:
             r = requests.get('https://pgorelease.nianticlabs.com/plfe/version', proxies=pr)
