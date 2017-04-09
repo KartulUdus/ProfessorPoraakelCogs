@@ -1,3 +1,5 @@
+# [WIP] CheckForced
+
 This cog allows to check against /plfe/version to determine the current API version Niantic requires to connect to PoGo.
 
 If the IP address of the system running Red is banned, you will need to install a proxy with this cog using the instructions below.
