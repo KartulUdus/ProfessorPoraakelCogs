@@ -1,0 +1,7 @@
+{
+    "AUTHOR" : "FrostTheFox",
+    "INSTALL_MSG" : "CheckForced ready for service. Type !checkforced to begin.",
+    "NAME" : "CheckForced",
+    "SHORT" : "Checks the forced API version of PoGo.",
+    "DESCRIPTION" : "Checks against plfe/version to find the currently forced Pokemon Go API version."
+}
