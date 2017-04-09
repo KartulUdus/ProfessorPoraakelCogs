@@ -14,7 +14,7 @@ class checkforced:
         """Grabs latest forced API version."""
 
         pr = {
-                 'http': '',
+                 'https': '',
              }
 
         try:
