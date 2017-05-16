@@ -25,7 +25,7 @@ SpriteBot v2.3
             await self.bot.delete_message(ctx.message)
     @commands.command(pass_context=True)
     async def cries(self, ctx):
-        message = """*Psst. You can grab cries at https://stuff.notfurprofit.org/cries01.zip*
+        message = """*Psst. You can grab Pokemon cries at https://stuff.notfurprofit.org/cries01.zip*
 
 Simply extract the "static" folder into the root of RocketMap. Replace any files in conflict.
 
