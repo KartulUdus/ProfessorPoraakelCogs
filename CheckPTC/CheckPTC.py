@@ -43,9 +43,9 @@ class checkptc():
         head = {'User-Agent': 'niantic'}
 
         try:
-            r = self._session.get(self.PTC_LOGIN_URL, headers=head)
+            r = self._session.get(self.PTC_LOGIN_URL, headers=head, timeout=15)
         except ConnectionError as e:
-            await self.bot.say(':x: PTC is probably down. Connection exception, the server probably completely failed to respond. Could be a problem on my end.', e)
+            await self.bot.say(':x: Timed out or failed to connect completely. PTC is probably having issues.', e)
 
         try:
             jdata = json.loads(r.content.decode('utf-8'))
@@ -67,7 +67,7 @@ class checkptc():
             self._session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             return False
 
-        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head)
+        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head, timeout=10)
 
         ticket = None
         try:
@@ -93,7 +93,7 @@ class checkptc():
             'code': self._refresh_token,
         }
 
-        r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
+        r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1, timeout=10)
 
         qs = r2.content.decode('utf-8')
         token_data = parse_qs(qs)
