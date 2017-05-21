@@ -1,9 +1,8 @@
-from urllib.parse import parse_qs
+from urllib.parse import parse_qs, urlsplit
 from discord.ext import commands
 import logging
 import json
 import discord
-import re
 
 try:
     from requests_futures.sessions import FuturesSession
@@ -56,7 +55,8 @@ class checkptc:
             await self.bot.say(':x: Failed to login to PTC.')
             return False
         try:
-            ticket = re.sub('.*ticket=', '', r2.result().history[0].headers['Location'])
+            qs = parse_qs(urlsplit(r2.result().headers['Location'])[3])
+            ptctoken = qs.get('ticket')[0]
             logging.info('PTC login successful.')
         except BaseException as e:
             logging.error('Failed to find ticket: %s', e)
@@ -72,8 +72,8 @@ class checkptc:
                 'code': ticket
             }
             r3 = session.post(oauth, data=accessdata, timeout=15)
-            qs = parse_qs(r3.result().content.decode('utf-8'))
-            accesstoken = qs.get('access_token', None)
+            tdata = parse_qs(r.text)
+            accesstoken = qs.get('access_token')
             if accesstoken is not None:
                 logging.info('PTC access token successfully retrieved.' + accesstoken[:25])
                 await self.bot.say(':white_check_mark: Logged into PTC successfully. \n' +
