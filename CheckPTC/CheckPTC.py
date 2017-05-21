@@ -73,7 +73,7 @@ class checkptc:
             }
             r3 = session.post(oauth, data=accessdata, timeout=15)
             tdata = parse_qs(r3.result().text)
-            accesstoken = qs.get('access_token')
+            accesstoken = tdata.get('access_token')
             if accesstoken is not None:
                 logging.info('PTC access token successfully retrieved.' + accesstoken[:25])
                 await self.bot.say(':white_check_mark: Logged into PTC successfully. \n' +
