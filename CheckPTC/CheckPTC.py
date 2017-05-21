@@ -56,7 +56,7 @@ class checkptc:
             return False
         try:
             qs = parse_qs(urlsplit(r2.result().headers['Location'])[3])
-            ptctoken = qs.get('ticket')[0]
+            ticket = qs.get('ticket')[0]
             logging.info('PTC login successful.')
         except BaseException as e:
             logging.error('Failed to find ticket: %s', e)
