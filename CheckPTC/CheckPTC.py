@@ -3,6 +3,7 @@ from discord.ext import commands
 import logging
 import json
 import discord
+import re
 
 try:
     from requests_futures.sessions import FuturesSession
