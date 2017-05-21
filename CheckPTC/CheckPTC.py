@@ -3,8 +3,6 @@ from requests_futures.sessions import FuturesSession
 import logging
 import json
 
-    wehaveitall = False
-
 class checkptc:
     """checks if PTC is working properly."""
 
