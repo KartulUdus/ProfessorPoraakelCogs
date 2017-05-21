@@ -72,7 +72,7 @@ class checkptc:
                 'code': ticket
             }
             r3 = session.post(oauth, data=accessdata, timeout=15)
-            tdata = parse_qs(r.text)
+            tdata = parse_qs(r3.result().text)
             accesstoken = qs.get('access_token')
             if accesstoken is not None:
                 logging.info('PTC access token successfully retrieved.' + accesstoken[:25])
