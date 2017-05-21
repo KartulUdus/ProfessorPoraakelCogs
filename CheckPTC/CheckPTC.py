@@ -20,8 +20,6 @@ class checkptc:
     def __init__(self, bot):
 
         self.bot = bot
-        with open('CheckPTC.json', 'r') as f:
-            config = json.load(f)
 
     @commands.command()
     async def checkptc(self):
@@ -43,8 +41,8 @@ class checkptc:
                 'lt': r1data['lt'],
                 'execution': r1data['execution'],
                 '_eventId': 'submit',
-                'username': config['username'],
-                'password': config['password'],
+                'username': '',
+                'password': '',
             }
         except BaseException as e:
             logging.error('Failed to GET lt and execution')
