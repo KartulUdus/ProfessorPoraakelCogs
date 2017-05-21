@@ -7,7 +7,7 @@ import discord
 try:
     from requests_futures.sessions import FuturesSession
     wehaveitall = True
-except:
+except ImportError:
     wehaveitall = False
 
 class checkptc:
