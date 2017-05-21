@@ -25,7 +25,7 @@ class checkptc:
         loginurl = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
         oauth = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
         clientsecret = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
-        head = {'User-Agent': 'niantic'}
+        head = {'User-Agent': 'pokemongo/0 CFNetwork/758.5.3 Darwin/15.6.0''}
         session = FuturesSession()
 
         try:
@@ -49,7 +49,7 @@ class checkptc:
             session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             return False
         try:
-            r2 = session.post(loginurl, data=data, headers=head, timeout=15)
+            r2 = session.post(loginurl, data=data, headers=head, timeout=15, allow_redirects=False)
         except BaseException as e:
             logging.error('Failed to POST login data: %s', e)
             await self.bot.say(':x: Failed to login to PTC.')
