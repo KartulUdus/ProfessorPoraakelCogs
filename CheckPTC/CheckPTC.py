@@ -44,21 +44,21 @@ class checkptc:
                 'password': '',
             }
         except BaseException as e:
-            logging.error('Failed to GET lt and execution')
+            logging.error('Failed to GET lt and execution: %s', e)
             await self.bot.say(':x: Failed initial auth GET, PTC might be having issues.')
             session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             return False
         try:
             r2 = session.post(loginurl, data=data, headers=head, timeout=15)
         except BaseException as e:
-            logging.error('Failed to POST login data.')
+            logging.error('Failed to POST login data: %s', e)
             await self.bot.say(':x: Failed to login to PTC.')
             return False
         try:
             ticket = re.sub('.*ticket=', '', r2.result().history[0].headers['Location'])
             logging.info('PTC login successful.')
         except BaseException as e:
-            logging.error('Failed to find ticket')
+            logging.error('Failed to find ticket: %s', e)
             await self.bot.say(':x: Couldn\'t find a valid ticket, PTC is probably having issues.')
             return False
         try:
@@ -79,12 +79,12 @@ class checkptc:
                                    'Token: `' + accesstoken[:25] + '`')
                 session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             else:
-                logging.error('Logged in, but failed to get access token.')
+                logging.error('Logged in, but failed to get access token: %s', e)
                 await self.bot.say(':x: Logged in, but unable to get an access token. PTC is probably having issues.')
                 session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
                 return False
         except BaseException as e:
-            logging.error('Logged in, but failed to get an access token.')
+            logging.error('Logged in, but failed to get an access token: %s', e)
             await self.bot.say(':x: Logged in, but unable to get an access token. PTC is probably having issues.')
             session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             return False
