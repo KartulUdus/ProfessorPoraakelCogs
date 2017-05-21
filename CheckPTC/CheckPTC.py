@@ -75,6 +75,7 @@ class checkptc:
             tdata = parse_qs(r3.result().text)
             accesstoken = tdata.get('access_token')
             if accesstoken is not None:
+                accesstoken = accesstoken[0]
                 logging.info('PTC access token successfully retrieved.' + accesstoken[:25])
                 await self.bot.say(':white_check_mark: Logged into PTC successfully. \n' +
                                    'Token: `' + accesstoken[:25] + '`')
