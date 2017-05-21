@@ -16,15 +16,15 @@ class checkptc:
     def __init__(self, bot):
 
         self.bot = bot
-        loginurl = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
-        oauth = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
-        clientsecret = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
 
     @commands.command()
     async def checkptc(self):
         """Checks the current status of PTC login."""
         logging.info('Trying to login to PTC.')
 
+        loginurl = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
+        oauth = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
+        clientsecret = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
         head = {'User-Agent': 'niantic'}
         session = FuturesSession()
 
