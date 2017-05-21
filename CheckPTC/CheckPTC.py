@@ -93,6 +93,6 @@ class checkptc():
 
 def setup(bot):
     if wehaveitall:
-		bot.add_cog(checkptc(bot))
-	else:
-		raise RuntimeError("You need to run `pip3 install requests_futures`")
+        bot.add_cog(checkptc(bot))
+    else:
+        raise RuntimeError("You need to run `pip3 install requests_futures`")
