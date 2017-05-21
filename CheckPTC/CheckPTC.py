@@ -8,7 +8,7 @@ try:
 except:
     wehaveitall = False
 
-class checkptc():
+class checkptc:
     """checks if PTC is working properly."""
 
     loginurl = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
