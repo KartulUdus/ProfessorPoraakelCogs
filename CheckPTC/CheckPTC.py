@@ -7,7 +7,7 @@ import discord
 try:
     from requests_futures.sessions import FuturesSession
     wehaveitall = True
-except ImportError:
+except:
     wehaveitall = False
 
 class checkptc:
@@ -33,7 +33,7 @@ class checkptc:
             r1 = session.get(loginurl, headers=head, timeout=15)
         except BaseException as e:
             await self.bot.say(':x: Timed out or failed to connect. PTC is probably having issues.')
-            logging.info('Failed to connect to PTC: %s', e)
+            logging.error('Failed to connect to PTC: %s', e)
             return False
         try:
             r1data = json.loads(r1.result().content.decode('utf-8'))
