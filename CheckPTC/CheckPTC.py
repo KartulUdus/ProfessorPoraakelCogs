@@ -1,7 +1,12 @@
-from requests_futures.sessions import FuturesSession
 from urllib.parse import parse_qs
 import logging
 import json
+
+try:
+    from requests_futures.sessions import FuturesSession
+    wehaveitall = True
+except:
+    wehaveitall = False
 
 class checkptc():
     """checks if PTC is working properly."""
@@ -87,4 +92,7 @@ class checkptc():
 
 
 def setup(bot):
-    bot.add_cog(checkptc(bot))
+    if wehaveitall:
+		bot.add_cog(checkptc(bot))
+	else:
+		raise RuntimeError("You need to run `pip3 install requests_futures`")
