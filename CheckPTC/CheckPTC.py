@@ -80,7 +80,7 @@ class checkptc:
                                    'Token: `' + accesstoken[:25] + '`')
                 session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
             else:
-                logging.error('Logged in, but failed to get access token: %s', e)
+                logging.error('Logged in, but failed to get access token.)
                 await self.bot.say(':x: Logged in, but unable to get an access token. PTC is probably having issues.')
                 session.get('https://club.pokemon.com/us/pokemon-trainer-club/logout')
                 return False
