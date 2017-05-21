@@ -6,3 +6,5 @@ Instructions for using CheckPTC:
 * Unload the CheckPTC cog.
 * Open CheckPTC.py, find line 44 and 45. Place your username and password in between the `''` after username and password respectively.
 * Load the CheckPTC cog.
+
+You will have to follow these steps after every update of this cog.
