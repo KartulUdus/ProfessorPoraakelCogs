@@ -21,15 +21,29 @@ class checkproxy:
         try:
             r = requests.get('https://pgorelease.nianticlabs.com/plfe/version', proxies=pr, timeout=5)
             if r.status_code == 200:
-                await self.bot.say(':white_check_mark: 200 OK, proxy is not banned.')
+                nstatus = ':white_check_mark: 200 OK, proxy is not banned.'
             if r.status_code == 403:
-                await self.bot.say(':x: 403 Forbidden, proxy is banned.')
+                nstatus = ':x: 403 Forbidden, proxy is banned.'
         except requests.exceptions.Timeout:
-            await self.bot.say(':x: Timed out checking proxy.')
+            nstatus = ':x: Timed out after 5 seconds.'
         except requests.exceptions.RequestException as e:
-            await self.bot.say('Something is wrong with your proxy. Make sure to put the port as well as remove http or https from your input. Authentication is not supported right now.')
+            nstatus = 'Something is wrong with your proxy. Make sure to put the port. Authentication is not supported right now.'
 
-        if not ctx.message.channel.is_private:
+        try:
+            r = requests.get('https://sso.pokemon.com/sso/login?locale=en&service=https://www.pokemon.com/us/pokemon-trainer-club/caslogin', proxies=pr, timeout=5)
+            if r.status_code == 200:
+                pstatus = ':white_check_mark: 200 OK, proxy is not banned.'
+            if r.status_code == 409:
+                pstatus = ':x: 409 Conflict, proxy is banned.'
+        except requests.exceptions.Timeout:
+            pstatus = ':x: Timed out after 5 seconds.'
+        except requests.exceptions.RequestException:
+            pstatus = 'Something is wrong with your proxy. Make sure to put the port. Authentication is not supported right now.'
+
+        await self.bot.say("""Niantic:""" + nstatus + """
+                           PTC:""" + pstatus)
+
+        if not ctx.message.chnel.is_private:
             await self.bot.delete_message(ctx.message)
 
 
