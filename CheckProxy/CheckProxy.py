@@ -40,8 +40,8 @@ class checkproxy:
         except requests.exceptions.RequestException:
             pstatus = 'Something is wrong with your proxy. Make sure to put the port. Authentication is not supported right now.'
 
-        await self.bot.say("""Niantic:""" + nstatus + """
-PTC:""" + pstatus)
+        await self.bot.say("""Niantic: """ + nstatus + """
+PTC: """ + pstatus)
 
         if not ctx.message.channel.is_private:
             await self.bot.delete_message(ctx.message)
