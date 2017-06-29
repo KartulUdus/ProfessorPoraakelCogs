@@ -29,7 +29,7 @@ class checkproxy:
             nstatus = ':x: Timed out after 5 seconds.'
         except requests.exceptions.RequestException as e:
             nstatus = 'Unable to connect to the proxy. Make sure to put the port. Authentication is not supported right now.'
-            logging.error('requestsexception: ' + e)
+            logging.error('requestsexception: ' + str(e))
 
         try:
             r = requests.get('https://sso.pokemon.com/sso/login?locale=en&service=https://www.pokemon.com/us/pokemon-trainer-club/caslogin', proxies=pr, timeout=5)
@@ -41,7 +41,7 @@ class checkproxy:
             pstatus = ':x: Timed out after 5 seconds.'
         except requests.exceptions.RequestException as e:
             pstatus = 'Unable to connect to the proxy. Make sure to put the port. Authentication is not supported right now.'
-            logging.error('requestsexception: ' + e)
+            logging.error('requestsexception: ' + str(e))
 
         await self.bot.say("""Niantic: """ + nstatus + """
 PTC: """ + pstatus)
