@@ -28,7 +28,7 @@ class checkproxy:
         except requests.exceptions.Timeout:
             nstatus = ':x: Timed out after 5 seconds.'
         except requests.exceptions.RequestException as e:
-            nstatus = 'Unable to connect to the proxy. Make sure to put the port. Authentication is not supported right now.'
+            nstatus = 'Unable to connect to the proxy, or timed out. Make sure to add https://, and the port.'
             logging.error('requestsexception: ' + str(e))
 
         try:
@@ -40,7 +40,7 @@ class checkproxy:
         except requests.exceptions.Timeout:
             pstatus = ':x: Timed out after 5 seconds.'
         except requests.exceptions.RequestException as e:
-            pstatus = 'Unable to connect to the proxy. Make sure to put the port. Authentication is not supported right now.'
+            pstatus = 'Unable to connect to the proxy, or timed out. Make sure to add https://, and the port.'
             logging.error('requestsexception: ' + str(e))
 
         await self.bot.say("""Niantic: """ + nstatus + """
