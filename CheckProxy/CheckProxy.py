@@ -1,5 +1,6 @@
 import discord
 import requests
+import logging
 from discord.ext import commands
 
 
