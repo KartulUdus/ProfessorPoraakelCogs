@@ -16,7 +16,7 @@ Simply extract the "static" folder into the root of RocketMap. Replace any files
 
 Mac OS Users: You must manually extract the icons folder and the png files into the static folder.
 
-If you don't like the look of sprite05, you may use https://stuff.notfurprofit.org/static04.zip.
+If you don't like the look of static05, you may use https://stuff.notfurprofit.org/static04.zip.
 
 SpriteBot v2.4
         """
