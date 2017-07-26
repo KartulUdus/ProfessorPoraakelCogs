@@ -11,7 +11,7 @@ class sprite:
     @commands.command(pass_context=True)
     async def alarms(self, ctx):
         message = """
-        * psst the current information sent in alarms is the following:*
+        *psst the current information sent in alarms is the following:*
         Pokemon:
                 Alakazam
                 Machamp
