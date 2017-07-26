@@ -103,4 +103,4 @@ https://patreon.com/poraakel
 
 
 def setup(bot):
-    bot.add_cog(sprite(bot))
+    bot.add_cog(alarms(bot))
