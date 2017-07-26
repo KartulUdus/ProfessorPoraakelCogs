@@ -1,7 +1,7 @@
 {
-    "AUTHOR" : "FrostTheFox",
-    "INSTALL_MSG" : "SpriteCog ready for service! Type !sprite to begin.",
-    "NAME" : "SpriteCog",
-    "SHORT" : "Gives you the link to the sprites",
-    "DESCRIPTION" : "Gives you the link to the sprites"
+    "AUTHOR" : "Kartul",
+    "INSTALL_MSG" : "Alarm plugin on valmis! Type !telegram to begin.",
+    "NAME" : "TelegramCog",
+    "SHORT" : "Telegram alarms and filters",
+    "DESCRIPTION" : "Gives you the link to the telegram alarms and specifies filter"
 }

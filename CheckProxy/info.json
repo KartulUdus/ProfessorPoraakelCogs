@@ -1,7 +1,0 @@
-{
-    "AUTHOR" : "FrostTheFox",
-    "INSTALL_MSG" : "CheckProxy ready for service. Type !checkproxy to begin.",
-    "NAME" : "CheckProxy",
-    "SHORT" : "Checks the given proxy.",
-    "DESCRIPTION" : "Checks if the given proxy is banned by Niantic by requesting an endpoint."
-}
