@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class sprite:
+class Alarms:
     """Send filter information"""
 
     def __init__(self, bot):
