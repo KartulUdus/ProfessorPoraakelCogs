@@ -9,7 +9,7 @@ class sprite:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def filter(self, ctx):
+    async def alarms(self, ctx):
         message = """
         * psst the current information sent in alarms is the following:*
         Pokemon:
