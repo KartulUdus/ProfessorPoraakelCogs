@@ -1,8 +1,6 @@
-# RocketMap-cogs
+# Poraakel-cogs
 
-Some custom cogs made specifically for the [RocketMap Discord](https://discord.gg/rocketmap)
+Some custom cogs made specifically for the [Poraakel Discord](https://discord.gg/8pzhytv)
 
 Currently includes:
-* CheckPTC
-* CheckProxy
-* SpriteCog
+* TelegramCog
