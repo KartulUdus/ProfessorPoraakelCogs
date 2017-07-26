@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class alarms:
+class sprite:
     """Send filter information"""
 
     def __init__(self, bot):
@@ -103,4 +103,4 @@ https://patreon.com/poraakel
 
 
 def setup(bot):
-    bot.add_cog(alarms(bot))
+    bot.add_cog(sprite(bot))
