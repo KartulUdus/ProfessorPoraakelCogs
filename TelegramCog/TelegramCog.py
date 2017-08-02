@@ -86,8 +86,9 @@ https://t.me/joinchat/AAAAAEF17qV6JhjMcT1IIw - North Tallinn
 https://t.me/joinchat/AAAAAEANW3hO-ZinRwzvBw - Center Tallinn
 https://t.me/joinchat/AAAAAEGRXBQYld3ieKxiwg - Peetri-Jüri
 https://t.me/joinchat/AAAAAEHASmqup0k4Jq_sVQ - Tartu
-https://t.me/joinchat/AAAAAEKQh-3bsQghbR4hXg - Pärnu
+https://t.me/joinchat/AAAAAEKQh-3bsQghbR4hXg - Rakvere
 https://t.me/joinchat/AAAAAD_LmpnjZDj15_TtrA - Haapsalu
+
 
 If you wish to support Poraakel, these alarms are available on Discord for support tier lime and up:
 
