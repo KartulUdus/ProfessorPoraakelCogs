@@ -1,0 +1,7 @@
+{
+    "AUTHOR" : "Kartul",
+    "INSTALL_MSG" : "Rolli plugin on valmis! Type !mystic or !instinct or !valor to begin.",
+    "NAME" : "PoraakelRolesCog",
+    "SHORT" : "Setting roles and making names pretty",
+    "DESCRIPTION" : "Sets you to the specified role"
+}
