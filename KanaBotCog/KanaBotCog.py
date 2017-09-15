@@ -105,13 +105,13 @@ class kanaBot:
         self.bot = bot
 
 
-    @commands.command()
-    async def kana(self, something):
+    @commands.command(pass_context=True)
+    async def kana(self, ctx):
 
 
-        if (member.Role(name='kananägu')):
+        if (ctx.Role(name='kananägu')):
 
-            await self.bot.say("lol pleb, you have " + something + "to be :chicken: to do that")
+            await self.bot.say("lol pleb, you have " + ctx + "to be :chicken: to do that")
 
 
 
