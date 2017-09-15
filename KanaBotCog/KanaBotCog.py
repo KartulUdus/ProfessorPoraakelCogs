@@ -107,7 +107,7 @@ class kanaBot:
 
 
 
-    @bot.group(pass_context=True)
+    @commands.group(pass_context=True)
     @commands.has_role("kananägu")
     async def kana(self, ctx):
         if ctx.invoked_subcommand is None:
