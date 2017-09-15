@@ -10,7 +10,7 @@ class kanaNagu:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def kana(self, ctx):
+    async def kana(self):
 
 
         if discord.Role.name == 'kananägu':
