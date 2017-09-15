@@ -63,6 +63,7 @@ def get_args():
 
 def ssh(cmd):
     cmds = {
+        'alarm': 'service alarms restart',
         'tallinn': 'service tallinnmap2 restart',
         'tartu': 'service tartumap restart',
         'peetri': 'service peetri restart',
@@ -118,11 +119,46 @@ class kanaBot:
        await self.bot.say("lol ple")
 
     @kana.command(pass_context=True)
-    async def potato(self):
+    async def tartu(self):
         await self.bot.say("lol potato")
 
-    async def tartu(self):
-       await self.bot.say("lol noob")
+    @kana.command(pass_context=True)
+    async def peetri(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def rakvere(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def haapsalu(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def kuressaare(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def webserver(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def nginx(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def dontdothis(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def test(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def alarm(self):
+        await self.bot.say("lol potato")
+
+
 
 
 
