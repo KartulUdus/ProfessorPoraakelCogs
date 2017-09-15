@@ -109,9 +109,9 @@ class kanaBot:
     async def kana(self, ctx):
 
         print discord.Member.roles
-        if ('&358207117951369217') in (discord.Member.roles):
+        if (True):
 
-            await self.bot.say("lol pleb, you have " + ctx + "to be :chicken: to do that")
+            await self.bot.say("lol pleb, you have " + discord.Member.roles + "to be :chicken: to do that")
 
 
 
