@@ -18,4 +18,4 @@ class kanaBot:
             await self.bot.say("lol pleb, " + user.mention + " you have to be :chicken: to do that")
 
 def setup(bot):
-    bot.add_cog(kanaNagu(bot))
+    bot.add_cog(kanaBot(bot))
