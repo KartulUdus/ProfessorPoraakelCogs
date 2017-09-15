@@ -106,12 +106,12 @@ class kanaBot:
 
 
     @commands.command()
-    async def kana(self, user : discord.Member):
+    async def kana(self, something):
 
 
         if discord.Role.name == 'kananägu':
 
-            await self.bot.say("lol pleb, you have to be :chicken: to do that")
+            await self.bot.say("lol pleb, you have " + something + "to be :chicken: to do that")
 
 
 
