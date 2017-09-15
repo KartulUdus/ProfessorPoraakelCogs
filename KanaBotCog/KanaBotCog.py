@@ -105,7 +105,7 @@ class kanaBot:
         self.bot = bot
 
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def kana(self):
 
 
