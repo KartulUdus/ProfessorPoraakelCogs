@@ -98,5 +98,9 @@ def sshgo(cmd):
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
 
 
+def test():
+    sshgo('test')
+
+
 if __name__ == "__main__":
     test()
