@@ -84,7 +84,7 @@ class kanaBot:
         try:
             theCmd = cmds[cmd]
         except KeyError:
-             return "you fool!"
+            return
 
         be = True
         if cmd in ("nginx", "webserver", "test"):
@@ -95,12 +95,12 @@ class kanaBot:
             ssh.connect(args.scanhost, username=args.scanuser,
                         password=args.scanpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return "Did the thing on BE server"
+            return
         else:
             ssh.connect(args.fronthost, username=args.frontuser,
                         password=args.frontpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return "Did the thing on FE server"
+            return
 
     @commands.command(pass_context=True)
     async def kana(self):
