@@ -114,7 +114,6 @@ class kanaBot:
             await self.bot.say('Invalid :chicken:')
 
     @kana.command()
-    @kana.has_role("kananägu")
 
     async def tallinn(self):
        await self.bot.say("lol ple")
