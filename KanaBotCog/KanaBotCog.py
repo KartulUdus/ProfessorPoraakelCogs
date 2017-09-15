@@ -80,7 +80,7 @@ def ssh(cmd):
         try:
             theCmd = cmds[cmd]
         except KeyError:
-
+            print "potato"
 
         be = True
         if cmd in ("nginx", "webserver"):
