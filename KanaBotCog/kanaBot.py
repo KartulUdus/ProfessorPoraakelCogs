@@ -3,7 +3,7 @@ import paramiko
 from discord.ext import commands
 
 
-class kanaNagu:
+class kanaBot:
     """Allow kanaNagu to have basic control"""
 
     def __init__(self, bot):
