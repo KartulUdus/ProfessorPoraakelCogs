@@ -95,7 +95,8 @@ def sshgo(cmd):
             return
 
 
-
+def test():
+    sshgo('peetri')
 
 if __name__ == "__main__":
-    print "I worked!"
+    test()
