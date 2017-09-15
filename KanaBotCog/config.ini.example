@@ -1,0 +1,16 @@
+
+########
+# Scanserver ssh credentials
+########
+
+scanhost:
+scanuser:
+scanpassword:
+
+########
+# webserver ssh credentials
+########
+
+fronthost:
+frontuser:
+frontpassword:
