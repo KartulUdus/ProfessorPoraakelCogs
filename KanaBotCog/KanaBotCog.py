@@ -7,68 +7,6 @@ import sys
 client = discord.Client()
 
 
-
-class kanaBot:
-    """Allow kanaNagu to have basic control"""
-
-    def __init__(self, bot):
-        self.bot = bot
-
-
-    @commands.group(pass_context=True)
-    @commands.has_role("kananägu")
-    async def kana(self, ctx):
-        if ctx.invoked_subcommand is None:
-            await self.bot.say('Invalid :chicken:')
-
-    @kana.command(pass_context=True)
-    async def tallinn(self):
-       await self.bot.say("lol ple")
-
-    @kana.command(pass_context=True)
-    async def tartu(self):
-        await self.bot.say("lol potato")
-
-    @kana.command(pass_context=True)
-    async def peetri(self):
-       await self.bot.say("lol ple")
-
-    @kana.command(pass_context=True)
-    async def rakvere(self):
-        await self.bot.say("lol potato")
-
-    @kana.command(pass_context=True)
-    async def haapsalu(self):
-       await self.bot.say("lol ple")
-
-    @kana.command(pass_context=True)
-    async def kuressaare(self):
-        await self.bot.say("lol potato")
-
-    @kana.command(pass_context=True)
-    async def webserver(self):
-       await self.bot.say("lol ple")
-
-    @kana.command(pass_context=True)
-    async def nginx(self):
-        await self.bot.say("lol potato")
-
-    @kana.command(pass_context=True)
-    async def dontdothis(self):
-       await self.bot.say("lol ple")
-
-    @kana.command(pass_context=True)
-    async def test(self):
-        print ssh("test")
-        await self.bot.say("lol potato")
-
-    @kana.command(pass_context=True)
-    async def alarm(self):
-        await self.bot.say("lol potato")
-
-
-
-
 def get_args():
         # Get full dir and default config file path
         configfile = []
@@ -159,6 +97,68 @@ def ssh(cmd):
                         password=args.frontpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
             return
+
+class kanaBot:
+    """Allow kanaNagu to have basic control"""
+
+    def __init__(self, bot):
+        self.bot = bot
+
+
+    @commands.group(pass_context=True)
+    @commands.has_role("kananägu")
+    async def kana(self, ctx):
+        if ctx.invoked_subcommand is None:
+            await self.bot.say('Invalid :chicken:')
+
+    @kana.command(pass_context=True)
+    async def tallinn(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def tartu(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def peetri(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def rakvere(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def haapsalu(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def kuressaare(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def webserver(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def nginx(self):
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def dontdothis(self):
+       await self.bot.say("lol ple")
+
+    @kana.command(pass_context=True)
+    async def test(self):
+        print ssh("test")
+        await self.bot.say("lol potato")
+
+    @kana.command(pass_context=True)
+    async def alarm(self):
+        await self.bot.say("lol potato")
+
+
+
+
 
 
 def setup(bot):
