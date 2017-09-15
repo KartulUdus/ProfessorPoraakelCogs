@@ -107,9 +107,8 @@ class kanaBot:
 
     @commands.command(pass_context=True)
     async def kana(self, ctx):
-
-
-        if ('kananägu') in discord.Member.roles:
+        kana = server.roles.get("name", "kananägu");
+        if (kana) in discord.Member.roles:
 
             await self.bot.say("lol pleb, you have " + ctx + "to be :chicken: to do that")
 
