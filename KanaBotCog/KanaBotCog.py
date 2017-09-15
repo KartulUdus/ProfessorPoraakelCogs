@@ -107,9 +107,10 @@ class kanaBot:
 
 
     @commands.command(pass_context=True)
+    @commands.has_any_role("kananägu", "moderator")
     async def kana(self, ctx):
 
-        await self.bot.say("lol pleb, you have " + str(discord.user) + "to be :chicken: to do that")
+        await self.bot.say("lol pleb, you have to be :chicken: to do that")
 
 
 
