@@ -102,7 +102,7 @@ class kanaBot:
 
     @commands.group(pass_context=True)
     @commands.has_role("kananägu")
-    async def kana(self, ctx):
+    async def kana(self, ctx, user : discord.Member):
         if ctx.invoked_subcommand is None:
             await self.bot.say('Invalid :chicken:')
 
