@@ -4,6 +4,7 @@ from discord.ext import commands
 import configargparse
 import os
 import sys
+client = discord.Client()
 
 
 def get_args():
@@ -108,7 +109,7 @@ class kanaBot:
     @commands.command(pass_context=True)
     async def kana(self):
 
-        await self.bot.say("lol pleb, you have " + str(discord.Message.user) + "to be :chicken: to do that")
+        await self.bot.say("lol pleb, you have " + str(discord.Server.roles) + "to be :chicken: to do that")
 
 
 
