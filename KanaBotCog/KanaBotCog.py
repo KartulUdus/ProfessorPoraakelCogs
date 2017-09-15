@@ -149,7 +149,7 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def test(self):
-        print ssh("test")
+        ssh("test")
         await self.bot.say("lol potato")
 
     @kana.command(pass_context=True)
