@@ -60,7 +60,7 @@ def get_args():
         )
         return parser.parse_args()
 
-def ssh(cmd):
+def sshgo(cmd):
         cmds = {
             'alarm': 'service alarms restart',
             'tallinn': 'service tallinnmap2 restart',
@@ -149,7 +149,7 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def test(self):
-        ssh("test")
+        sshgo("test")
         await self.bot.say("lol potato")
 
     @kana.command(pass_context=True)
