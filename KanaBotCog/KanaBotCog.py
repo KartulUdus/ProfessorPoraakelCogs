@@ -116,12 +116,12 @@ class kanaBot:
     @kana.command()
     @kana.has_role("kananägu")
 
-     async def tallinn(self):
-        await self.bot.say("lol ple")
+    async def tallinn(self):
+       await self.bot.say("lol ple")
 
 
-     async def tartu(self):
-        await self.bot.say("lol noob")
+    async def tartu(self):
+       await self.bot.say("lol noob")
 
 
 
