@@ -109,7 +109,7 @@ class kanaBot:
     async def kana(self, ctx):
 
 
-        if (ctx.Role(name='kananägu')):
+        if ("kananägu") in author.roles:
 
             await self.bot.say("lol pleb, you have " + ctx + "to be :chicken: to do that")
 
