@@ -84,8 +84,7 @@ class kanaBot:
         try:
             theCmd = cmds[cmd]
         except KeyError:
-            print "you fool"
-            exit(1)
+             return "you fool!"
 
         be = True
         if cmd in ("nginx", "webserver", "test"):
