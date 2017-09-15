@@ -7,11 +7,7 @@ import sys
 client = discord.Client()
 
 
-
-class kanaBot:
-    """Allow kanaNagu to have basic control"""
-
-    def get_args():
+def get_args():
         # Get full dir and default config file path
         configfile = []
         if '-cf' not in sys.argv and '--config' not in sys.argv:
@@ -64,7 +60,7 @@ class kanaBot:
         )
         return parser.parse_args()
 
-    def ssh(cmd):
+def ssh(cmd):
         cmds = {
             'alarm': 'service alarms restart',
             'tallinn': 'service tallinnmap2 restart',
@@ -84,7 +80,7 @@ class kanaBot:
         try:
             theCmd = cmds[cmd]
         except KeyError:
-            return
+
 
         be = True
         if cmd in ("nginx", "webserver"):
@@ -95,12 +91,16 @@ class kanaBot:
             ssh.connect(args.scanhost, username=args.scanuser,
                         password=args.scanpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return
+
         else:
             ssh.connect(args.fronthost, username=args.frontuser,
                         password=args.frontpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return
+
+
+class kanaBot:
+    """Allow kanaNagu to have basic control"""
+
     def __init__(self, bot):
         self.bot = bot
 
