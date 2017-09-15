@@ -118,6 +118,8 @@ class kanaBot:
     async def tallinn(self):
        await self.bot.say("lol ple")
 
+    async def potato(self):
+        await self.bot.say("kartuul")
 
     async def tartu(self):
        await self.bot.say("lol noob")
