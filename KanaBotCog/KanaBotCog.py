@@ -114,12 +114,12 @@ class kanaBot:
             await self.bot.say('Invalid :chicken:')
 
     @kana.command(pass_context=True)
-
     async def tallinn(self):
        await self.bot.say("lol ple")
 
+    @kana.command(pass_context=True)
     async def potato(self):
-        await self.bot.say("kartuul")
+        await self.bot.say("lol potato")
 
     async def tartu(self):
        await self.bot.say("lol noob")
