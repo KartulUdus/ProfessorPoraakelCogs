@@ -1,7 +1,6 @@
 import discord
 import paramiko
 from discord.ext import commands
-from commander import sshgo
 import configargparse
 import os
 import sys
