@@ -106,7 +106,7 @@ class kanaBot:
 
 
     @commands.command()
-    async def kana(self):
+    async def kana(self, , user : discord.Member):
 
 
 #        if discord.Role.name == 'sudo':
