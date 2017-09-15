@@ -106,12 +106,22 @@ class kanaBot:
         self.bot = bot
 
 
-    @commands.command(pass_context=True)
+
+    @bot.group(pass_context=True)
     @commands.has_role("kananägu")
     async def kana(self, ctx):
+        if ctx.invoked_subcommand is None:
+            await self.bot.say('Invalid :chicken:')
 
-        await self.bot.say("lol pleb, you have to be :chicken: to do that")
+    @kana.command()
+    @kana.has_role("kananägu")
 
+        async def tallinn(self):
+            await self.bot.say("lol ple")
+
+
+        async def tartu(self):
+            await self.bot.say("lol noob")
 
 
 
