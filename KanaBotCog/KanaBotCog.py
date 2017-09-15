@@ -76,9 +76,9 @@ def sshgo(cmd):
         }
 
         args = get_args()
-
+        theCmd = cmds[cmd]
         be = True
-        if cmd in ("nginx", "webserver","test"):
+        if cmd in ("nginx", "webserver"):
             be = False
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
