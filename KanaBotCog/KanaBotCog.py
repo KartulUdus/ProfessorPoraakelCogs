@@ -7,7 +7,11 @@ import sys
 client = discord.Client()
 
 
-def get_args():
+
+class kanaBot:
+    """Allow kanaNagu to have basic control"""
+
+    def get_args():
         # Get full dir and default config file path
         configfile = []
         if '-cf' not in sys.argv and '--config' not in sys.argv:
@@ -60,7 +64,7 @@ def get_args():
         )
         return parser.parse_args()
 
-def ssh(cmd):
+    def ssh(cmd):
         cmds = {
             'alarm': 'service alarms restart',
             'tallinn': 'service tallinnmap2 restart',
@@ -97,10 +101,6 @@ def ssh(cmd):
                         password=args.frontpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
             return
-
-class kanaBot:
-    """Allow kanaNagu to have basic control"""
-
     def __init__(self, bot):
         self.bot = bot
 
