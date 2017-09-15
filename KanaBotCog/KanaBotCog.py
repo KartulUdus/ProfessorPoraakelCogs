@@ -123,7 +123,7 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def rakvere(self, user : discord.Member):
-        sshgo("rakvere")
+        sshgo('rakvere')
         await self.bot.say(":white_check_mark: "+ user.mention +" rakvere restarted")
 
     @kana.command(pass_context=True)
