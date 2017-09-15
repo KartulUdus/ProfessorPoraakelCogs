@@ -109,8 +109,7 @@ class kanaBot:
     @commands.command(pass_context=True)
     async def kana(self):
 
-    if discord.user.role.id
-        await self.bot.say("lol pleb, you have " + str(discord.role)+ "to be :chicken: to do that")
+    await self.bot.say("lol pleb, you have " + str(discord.role)+ "to be :chicken: to do that")
 
 
 
