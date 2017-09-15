@@ -113,7 +113,7 @@ class kanaBot:
         if ctx.invoked_subcommand is None:
             await self.bot.say('Invalid :chicken:')
 
-    @kana.command()
+    @kana.command(pass_context=True)
 
     async def tallinn(self):
        await self.bot.say("lol ple")
