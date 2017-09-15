@@ -84,7 +84,7 @@ def ssh(cmd):
         return
 
     be = True
-    if cmd in ("nginx", "webserver", "test"):
+    if cmd in ("nginx", "webserver"):
         be = False
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -152,6 +152,7 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def test(self):
+        ssh('test')
         await self.bot.say("lol potato")
 
     @kana.command(pass_context=True)
