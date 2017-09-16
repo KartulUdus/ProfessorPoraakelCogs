@@ -1,0 +1,7 @@
+{
+    "AUTHOR" : "Kartul",
+    "INSTALL_MSG" : "Alarm plugin on valmis! Type scream to begin.",
+    "NAME" : "ScreamCog",
+    "SHORT" : "cog to make th bot scream",
+    "DESCRIPTION" : "uses !scream to send out a big message"
+}
