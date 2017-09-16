@@ -5,7 +5,7 @@ import configargparse
 import os
 import sys
 client = discord.Client()
-
+author = ctx.message.author
 
 def get_args():
         # Get full dir and default config file path
@@ -128,7 +128,6 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def haapsalu(self, ctx):
-        author = ctx.message.author
         sshgo("haapsalu")
         await self.bot.say(":white_check_mark: "+ author.mention +" haapsalu restarted")
 
