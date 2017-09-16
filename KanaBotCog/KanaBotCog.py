@@ -114,7 +114,7 @@ class kanaBot:
     @kana.command(pass_context=True)
     async def tartu(self):
         sshgo("tartu")
-        await self.bot.say(":white_check_mark: "+ self.bot.mention +" tartu restarted")
+        await self.bot.say(":white_check_mark: "+ self.author.mention +" tartu restarted")
 
     @kana.command(pass_context=True)
     async def peetri(self):
