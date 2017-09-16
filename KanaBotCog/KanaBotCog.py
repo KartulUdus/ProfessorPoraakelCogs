@@ -5,7 +5,6 @@ import configargparse
 import os
 import sys
 client = discord.Client()
-author = ctx.message.author
 
 def get_args():
         # Get full dir and default config file path
@@ -103,6 +102,7 @@ class kanaBot:
     @commands.group(pass_context=True)
     @commands.has_role("kananägu")
     async def kana(self, ctx):
+        author =
         if ctx.invoked_subcommand is None:
             await self.bot.say('Invalid :chicken:')
 
@@ -114,7 +114,7 @@ class kanaBot:
     @kana.command(pass_context=True)
     async def tartu(self):
         sshgo("tartu")
-        await self.bot.say(":white_check_mark: "+ message.author.mention +" tartu restarted")
+        await self.bot.say(":white_check_mark: "+ (ctx.message.author).mention +" tartu restarted")
 
     @kana.command(pass_context=True)
     async def peetri(self, ctx):
@@ -138,6 +138,7 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def webserver(self):
+
         sshgo("webserver")
         await self.bot.say(":white_check_mark: "+ user.mention +" frontend restarted")
 
