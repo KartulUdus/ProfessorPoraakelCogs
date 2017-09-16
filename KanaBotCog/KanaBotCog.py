@@ -102,57 +102,57 @@ class kanaBot:
 
     @commands.group(pass_context=True)
     @commands.has_role("kananägu")
-    async def kana(self, ctx, user : discord.Member):
+    async def kana(self, ctx):
         if ctx.invoked_subcommand is None:
             await self.bot.say('Invalid :chicken:')
 
     @kana.command(pass_context=True)
-    async def tallinn(self, user : discord.Member):
+    async def tallinn(self):
        sshgo("tallinn")
-       await self.bot.say(":white_check_mark: "+ user.mention +" tallinn restarted")
+       await self.bot.say(":white_check_mark: "+ message.author.mention +" tallinn restarted")
 
     @kana.command(pass_context=True)
-    async def tartu(self, user : discord.Member):
+    async def tartu(self):
         sshgo("tartu")
         await self.bot.say(":white_check_mark: "+ user.mention +" tartu restarted")
 
     @kana.command(pass_context=True)
-    async def peetri(self, user : discord.Member):
+    async def peetri(self):
         sshgo("peetri")
         await self.bot.say(":white_check_mark: "+ user.mention +" peetri restarted")
 
     @kana.command(pass_context=True)
-    async def rakvere(self, user : discord.Member):
+    async def rakvere(self):
         sshgo('rakvere')
         await self.bot.say(":white_check_mark: "+ user.mention +" rakvere restarted")
 
     @kana.command(pass_context=True)
-    async def haapsalu(self, user : discord.Member):
+    async def haapsalu(self):
        sshgo("haapsalu")
        await self.bot.say(":white_check_mark: "+ str(discord.Member.mention) +" haapsalu restarted")
 
     @kana.command(pass_context=True)
-    async def kuressaare(self, user : discord.Member):
+    async def kuressaare(self):
         sshgo("kuressaare")
         await self.bot.say(":white_check_mark: "+ discord.Author.mention +" kuressaare restarted")
 
     @kana.command(pass_context=True)
-    async def webserver(self, user : discord.Member):
+    async def webserver(self):
         sshgo("webserver")
         await self.bot.say(":white_check_mark: "+ user.mention +" frontend restarted")
 
     @kana.command(pass_context=True)
-    async def nginx(self, user : discord.Member):
+    async def nginx(self):
         sshgo("nginx")
         await self.bot.say(":white_check_mark: "+ user.mention +" nginx restarted")
 
     @kana.command(pass_context=True)
-    async def dontdothis(self, user : discord.Member):
+    async def dontdothis(self):
         sshgo("dontdothis")
         await self.bot.say(":white_check_mark: "+ user.mention +" :hamster: server restarted")
 
     @kana.command(pass_context=True)
-    async def alarm(self, user : discord.Member):
+    async def alarm(self):
         sshgo("alarm")
         await self.bot.say(":white_check_mark: "+ user.mention +" alarms restarted")
 
