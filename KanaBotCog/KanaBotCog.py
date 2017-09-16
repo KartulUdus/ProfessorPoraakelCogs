@@ -109,7 +109,7 @@ class kanaBot:
     @kana.command(pass_context=True)
     async def tallinn(self):
        sshgo("tallinn")
-       await self.bot.say(":white_check_mark: "+ ctx.author.mention +" tallinn restarted")
+       await self.bot.say(":white_check_mark: "+ kana.author.mention +" tallinn restarted")
 
     @kana.command(pass_context=True)
     async def tartu(self):
