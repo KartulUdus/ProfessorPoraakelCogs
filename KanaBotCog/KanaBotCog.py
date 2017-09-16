@@ -134,7 +134,7 @@ class kanaBot:
     @kana.command(pass_context=True)
     async def kuressaare(self):
         sshgo("kuressaare")
-        await self.bot.say(":white_check_mark: "+ discord.Author.mention +" kuressaare restarted")
+        await self.bot.say(":white_check_mark: "+ author.mention +" kuressaare restarted")
 
     @kana.command(pass_context=True)
     async def webserver(self):
