@@ -10,7 +10,7 @@ class telegram:
 
     @commands.command(pass_context=True)
 
-    async def scream(self, TEXT:str):
+    async def scream(self, ctx = TEXT:str):
 
         await self.bot.say(TEXT)
 
