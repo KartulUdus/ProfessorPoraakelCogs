@@ -85,12 +85,12 @@ def sshgo(cmd):
             ssh.connect(args.scanhost, username=args.scanuser,
                         password=args.scanpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return
+
         else:
             ssh.connect(args.fronthost, username=args.frontuser,
                         password=args.frontpassword)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(theCmd)
-            return
+
 
 class kanaBot:
     """Allow kanaNagu to have basic control"""
