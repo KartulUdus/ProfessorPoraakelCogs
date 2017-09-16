@@ -128,8 +128,9 @@ class kanaBot:
 
     @kana.command(pass_context=True)
     async def haapsalu(self, ctx):
-       sshgo("haapsalu")
-       await self.bot.say(":white_check_mark: "+ ctx.message.author.mention() +" haapsalu restarted")
+        author = ctx.message.author
+        sshgo("haapsalu")
+        await self.bot.say(":white_check_mark: "+ author.mention +" haapsalu restarted")
 
     @kana.command(pass_context=True)
     async def kuressaare(self):
