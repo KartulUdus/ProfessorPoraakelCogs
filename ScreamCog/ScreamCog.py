@@ -12,7 +12,7 @@ class telegram:
 
     async def scream(self, text*):
 
-        await self.bot.say(text)
+        await self.bot.say(text*)
 
 
 
