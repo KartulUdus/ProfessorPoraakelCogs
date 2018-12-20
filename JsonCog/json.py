@@ -1,4 +1,3 @@
-from urllib.parse import parse_qs, urlsplit
 from discord.ext import commands
 import logging
 import json
