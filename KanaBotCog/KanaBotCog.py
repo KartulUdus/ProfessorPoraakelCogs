@@ -3,11 +3,6 @@ import logging
 import json
 import discord
 
-try:
-    from requests_futures.sessions import FuturesSession
-    wehaveitall = True
-except:
-    wehaveitall = False
 
 class json:
     """Gives JSON formatted """
